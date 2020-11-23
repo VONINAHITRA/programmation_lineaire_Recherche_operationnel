@@ -1,0 +1,25 @@
+for (var i = 1; i < 12000; i++) {
+				switch(direction){
+					case d.BAS:
+						coo1.y--;
+						coo2.y--;
+						break;
+					case d.HAUT:
+						coo1.y++;
+						coo2.y++;
+						break;
+					case d.GAUCHE:
+						coo1.x++;
+						coo2.x++;
+						break;
+					case d.DROITE:
+						coo1.x--;
+						coo2.x--;
+						break;
+				}
+				ctx.beginPath();
+				ctx.moveTo(coo1.x, coo1.y);
+				ctx.lineTo(coo2.x, coo2.y);
+				ctx.strokeStyle = "rgba(1001, 200, 77," + (1 - 800/1000)/2 + ")";
+				ctx.stroke();
+			}
